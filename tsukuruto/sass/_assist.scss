@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+/******************************************************
+*
+*   1. float reset
+*   2. float set
+*   3. text align
+*   4. list indent
+*   5. space
+*   6. font style
+*   7. hide anchor
+*   8. box
+*   9. form
+*   10. older style
+******************************************************/
+
+/*  1. float reset */
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+/* .clearfix class wraps enclosing block element around inner floated elements */
+.clearfix { zoom: 1; }
+.clearfix:after { content: " "; clear: both; overflow: hidden; width: 1px; height: 1px; margin: 0 -1px -1px 0; border: 0; padding: 0; font-size: 0; line-height: 0; }
+.clear, .clear { clear: both;}
+
+/*  2. float set */
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+.left, .Left { display: inline; float: left; }
+.right, .Right { display: inline; float: right; }
+
+/*  3. text align */
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+.ta-center { text-align: center; }
+.ta-left { text-align: left; }
+.ta-right { text-align: right; }
+.textR {    text-align: right !important; }
+.textC {    text-align: center !important; }
+.textL {    text-align: left !important; }
+
+.vaT { vertical-align: top !important;}
+.vaM { vertical-align: middle !important;}
+.vaB {vertical-align: bottom !important;}
+
+/*  4. list indent */
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+.indent li { position: relative; margin-left: 1.5em; }
+.indent li span { position: absolute; left: -1.5em; }
+
+/*  5. space */
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* margin-top */
+@for $i from 0 through 50 {
+    .mt#{$i} {
+        margin-top: #{$i}px !important;
+    }
+}
+@for $i from 0 through 10 {
+    .mt#{50+$i*5} {
+        margin-top: #{$i*5}px !important;
+    }
+}
+
+/* margin-bottom */
+@for $i from 0 through 50 {
+    .mb#{$i} {
+        margin-bottom: #{$i}px !important;
+    }
+}
+@for $i from 0 through 10 {
+    .mb#{50+$i*5} {
+        margin-bottom: #{$i*5}px !important;
+    }
+}
+
+/* margin-right */
+@for $i from 0 through 50 {
+    .mr#{$i} {
+        margin-right: #{$i}px !important;
+    }
+}
+
+/* margin-left */
+@for $i from 0 through 50 {
+    .ml#{$i} {
+        margin-left: #{$i}px !important;
+    }
+}
+
+
+/* padding-top */
+@for $i from 0 through 50 {
+    .pt#{$i} {
+        padding-top: #{$i}px !important;
+    }
+}
+@for $i from 0 through 10 {
+    .pt#{50+$i*5} {
+        padding-top: #{$i*5}px !important;
+    }
+}
+
+/* padding-bottom */
+@for $i from 0 through 50 {
+    .pt#{$i} {
+        padding-bottom: #{$i}px !important;
+    }
+}
+@for $i from 0 through 10 {
+    .pt#{50+$i*5} {
+        padding-bottom: #{$i*5}px !important;
+    }
+}
+
+/* padding-right */
+@for $i from 0 through 50 {
+    .pr#{$i} {
+        padding-right: #{$i}px !important;
+    }
+}
+
+/* padding-left */
+@for $i from 0 through 50 {
+    .pl#{$i} {
+        padding-left: #{$i}px !important;
+    }
+}
+
+
+/*  6. font style */
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+.bold { font-weight: bold !important; }
+.nomal { font-weight: normal !important; }
+
+.large { font-size:larger !important; }
+.small { font-size:small !important; }
+.medium { font-size: 16px; font-size: 1.6rem !important;}
+
+.nowrap {white-space: nowrap !important;}
+
+/*  hide anchor */
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.show { display: block;}
+.hide { display: none;}
+
+.accessibility,
+.guidance {
+  position: absolute;
+  z-index: 100;
+  top: 0px;
+  right: 0px;
+  display: run-in;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  overflow: hidden;
+}
+
+.screen-reader-text {
+ position: absolute; left: -1000em;
+}
+
+
+/*  8. box */
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+@for $i from 1 through 200 {
+    .w#{$i*5} {
+        width: #{$i*5}px !important;
+    }
+}
+@for $i from 1 through 200 {
+    .h#{$i*5} {
+        height: #{$i*5}px !important;
+    }
+}
+
+.box {
+}
+
+
+/*  9. form */
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+span.required {
+    color: #c00;
+    font-size: 12px;
+    padding-left: 8px;
+}
+select.required,
+input.required,
+textarea.required {
+    background-color: #FFEEEE;
+    border: 1px solid #7F9DB9
+}
+
+label {
+    margin-right: 10px;
+}
+
+label input {
+    margin-right: 5px;
+}
+
