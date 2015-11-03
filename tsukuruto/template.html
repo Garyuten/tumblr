@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!--
+  Theme: Tukuruto
+  by @Garyuten
+  http://blog.cgfm.jp/garyu/
+  (c) 2015 Toru Kaneuchi
+  Free to use under the MIT license.
+  This theme is based on Tokusetsu 2. Thanks @sanographix.
+
+  Theme: Tokusetsu 2
+  by @sanographix
+  http://www.sanographix.net
+  (c) 2013 Showkaku Sano
+  Free to use under the MIT license.
+  Please leave at least ONE credit link. Do not delete this box.
+-->
+
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Variables -->
+  <meta name="select:ThemeColor" content="red" title="Strawberry">
+  <meta name="select:ThemeColor" content="green" title="Turquoise">
+  <meta name="select:ThemeColor" content="blue" title="Blue">
+  <meta name="select:ThemeColor" content="gray" title="Smoke">
+
+  <meta name="text:Introduction" content="" />
+  <meta name="text:Introduction Heading" content="Introduction" />
+  <meta name="text:Youtube Embed Code" content="" />
+  <meta name="text:Nicovideo Embed Code" content="" />
+  <meta name="text:Footer Text" content="" />
+  <meta name="text:Google Analytics ID" content="" />
+
+  <meta name="if:Enable Facebook Button" content="1"/>
+  <meta name="if:Enable Tweet Button" content="1"/>
+  <meta name="if:Enable Bookmark Button" content="1"/>
+  <meta name="if:Enable Plus1 Button" content="1"/>
+  <meta name="image:Main Image" content=""/>
+
+  <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:Circle Name}{/block:IndexPage}</title>
+  {block:TagPage}
+  <meta name="robots" content="noindex,follow"/>
+  {/block:TagPage}
+  {block:DayPage}
+  <meta name="robots" content="noindex,follow"/>
+  {/block:DayPage}
+  {block:Description}
+  <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+  <meta name="viewport" content="width=device-width">
+
+  <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:Circle Name}{/block:IndexPage}" />
+  <meta property="og:type" content="website" />
+  {block:IfMainImageImage}
+  <meta property="og:image" content="{image:Main Image}" />
+  {/block:IfMainImageImage}
+  <meta property="og:site_name" content="{Title}" />
+  {block:Description}
+  <meta property="og:description" content="{MetaDescription}">
+  {/block:Description}
+
+  <link rel="stylesheet" href="//garyuten.github.io/tumblr/tsukuruto/css/style.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,300italic' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="{Favicon}">
+  {block:IndexPage}
+  <link rel="canonical" href="{BlogURL}"/>
+  <meta property="og:url" content="{BlogURL}" />
+  {/block:IndexPage}
+  {block:PermalinkPage}
+  <link rel="canonical" href="{Permalink}"/>
+  <meta property="og:url" content="{Permalink}" />
+  {/block:PermalinkPage}
+  <!--[if lt IE 9]>
+  <script src="//sanographix.github.io/public/tumblr/tokusetsu2/js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <style>{CustomCSS}</style>
+
+</head>
+<body class="{select:ThemeColor}">
+  {block:IfEnableFacebookButton}
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  {/block:IfEnableFacebookButton}
+  <header id="globalheader">
+    <div class="globalheader-inner content">
+      <h1>
+        <a href="/">{Title}</a>
+      </h1>
+      <nav class="header-nav">
+        <ul>
+          <li>
+            <a href="/">HOME</a>
+          </li>
+          {block:HasPages}
+              {block:Pages}
+          <li>
+            <a href="{URL}">{Label}</a>
+          </li>
+          {/block:Pages}
+            {/block:HasPages}
+        </ul>
+      </nav>
+    </div>
+  </header>
+  {block:IndexPage}
+  <!-- ここから Index ページ -->
+
+  <section id="header-image">
+    <div class="header-image-content" style="background-image:url('{image:Main Image}');"></div>
+    <div class="header-image-mask"></div>
+  </section>
+
+  <div class="section-wrapper">
+
+    <section id="info" class="section">
+      <div class="content">
+        <table class="table" id="spec-table">
+          <tbody>
+            <tr>
+              <th>開催日</th>
+              <td>2016年1月23日［土］ 12:00-18:00  /  9月20日［日］ 10:00-18:00</td>
+            </tr>
+            <tr>
+              <th>場所</th>
+              <td>九州大学大橋キャンパス　多次元デザイン実験棟　多次元ホール</td>
+            </tr>
+            <tr>
+              <th>入場料</th>
+              <td>無料</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ul class="social-buttons">
+          {block:IfEnableTweetButton}
+          <li class="social-button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="{BlogURL}">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </li>
+          {/block:IfEnableTweetButton}
+          {block:IfEnableFacebookButton}
+          <li class="social-button">
+            <div class="fb-like" data-url="{BlogURL}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+          </li>
+          {/block:IfEnableFacebookButton}
+          {block:IfEnableBookmarkButton}
+          <li class="social-button">
+            <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加">
+              <img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
+            </a>
+            <script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+          </li>
+          {/block:IfEnableBookmarkButton}
+          {block:IfEnablePlus1Button}
+          <li class="social-button">
+            <div class="g-plusone" data-size="medium"></div>
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'ja'};
+
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+          </li>
+          {/block:IfEnablePlus1Button}
+        </ul>
+
+      </div>
+    </section>
+
+    <section id="callformaker" class="section">
+      <div class="content">
+        <h1>つくると！ 出展申し込み</h1>
+        <p style="margin:26px auto 0; line-height:2; text-align:justify;">つくると！を一緒に盛り上げてくれる出展者を募集しています。</p>
+
+        <a href="/callformaker">出展申し込みはこちらから</a>
+
+        <p>
+          出展申し込み締切 <strong>2015年12月20日（日）</strong>
+          <br>
+          <span>※ただし、出展申し込みが多数の場合は、締切前に受付を終了する場合があります。</span>
+        </p>
+      </div>
+    </section>
+    {block:IfYoutubeEmbedCode}
+    <section id="youtube" class="section">
+      <div class="content">
+        <h3>Youtube</h3>
+        <div id="youtube-iframe">
+          <iframe width="560" height="315" src="http://www.youtube.com/embed/{text:Youtube Embed Code}" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    {/block:IfYoutubeEmbedCode}
+
+    {block:IfNicovideoEmbedCode}
+    <section id="nicovideo" class="section">
+      <h3>NIcoNico</h3>
+      <script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/{text:Nicovideo Embed Code}"></script>
+    </section>
+    {/block:IfNicovideoEmbedCode}
+
+    {block:IfSoundcloudEmbedCode}
+    <section id="soundcloud" class="section">
+      <div class="content">
+        <h3>Soundcloud</h3>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F{text:Soundcloud Embed Code}&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
+      </div>
+    </section>
+    {/block:IfSoundcloudEmbedCode}
+    <section id="maker" class="section">
+      <h2>出展者情報</h2>
+      ※出展者が決まり次第掲載します
+    </section>
+    {block:IfBanner1Image}
+    <section id="banner" class="section">
+      <div class="content">
+        <h3>Banner</h3>
+        <span class="banner-box">
+          <img src="{image:Banner1}" alt="Banner1"></span>
+        <span class="banner-box">
+          <img src="{image:Banner2}" alt="Banner2"></span>
+      </div>
+    </section>
+    {block:IfBanner1Image}
+  </div>
+  {/block:IndexPage}
+  <!-- END Index -->
+  {block:PermalinkPage}
+  <!-- Permalink -->
+  {block:Posts}
+  <div class="section-wrapper">
+    <section class="section">
+      <div class="content">
+        {block:Text}
+        <!-- 固定ページ -->
+        {block:Title}
+        <div class="page-header">
+          <h2>
+            <a href="{Permalink}" class="permalink">{Title}</a>
+          </h2>
+        </div>
+        {/block:Title}
+        <div class="entry-content">{Body}</div>
+        {/block:Text}
+      </div>
+    </section>
+  </div>
+  {/block:Posts}
+  {/block:PermalinkPage}
+  <!-- Permalink -->
+
+  <footer id="footer">
+    <div class="content">
+      <p>
+        ©{CopyrightYears} {Title}
+        <br/>
+        {text:Footer Text}
+      </p>
+      <p>
+        <!-- ↓ ここのリンク消さないでほしいっす -->
+        <a href="http://sanographix.github.io/tumblr/tokusetsu2/" target="_blank">Tokusetsu 2</a>
+        theme designed by
+        <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+        <a href="http://sanographix.github.io/tumblr/tokusetsu2/" target="_blank">Install theme</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="//garyuten.github.io/tumblr/tsukuruto/js/script.js"></script>
+</body>
+</html>
