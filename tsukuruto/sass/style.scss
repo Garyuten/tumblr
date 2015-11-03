@@ -137,12 +137,15 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
   z-index: 10;
   h1 {
     font-size: 320%;
-    margin: 0;
+    margin: 40px 0;
     font-weight: 200;
     line-height: 1.1;
     a {
       color: #e86779;
     }
+  }
+  .logo {
+    width: 200px;
   }
 }
 
@@ -197,24 +200,24 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
 
 section.section {
   padding: 3em 0;
-  &:nth-child(3n+1) {
-    background-color: #e86779;
-  }
-  &:nth-child(3n+2) {
-    background-color: #fff;
-  }
-  &:nth-child(3n+3) {
-    background-color: #3a3e4a;
-  }
+  // &:nth-child(3n+1) {
+  //   background-color: #e86779;
+  // }
+  // &:nth-child(3n+2) {
+  //   background-color: #fff;
+  // }
+  // &:nth-child(3n+3) {
+  //   background-color: #3a3e4a;
+  // }
 }
 
 .section {
   &:nth-child(3n+1), &:nth-child(3n+3) {
-    color: #fff;
-    color: rgba(255, 255, 255, 0.8);
+    // color: #fff;
+    // color: rgba(255, 255, 255, 0.8);
   }
   &:nth-child(3n+1) h1, &:nth-child(3n+3) h1, &:nth-child(3n+1) h2, &:nth-child(3n+3) h2, &:nth-child(3n+1) h3, &:nth-child(3n+3) h3, &:nth-child(3n+1) h4, &:nth-child(3n+3) h4, &:nth-child(3n+1) h5, &:nth-child(3n+3) h5, &:nth-child(3n+1) a, &:nth-child(3n+3) a {
-    color: #fff;
+    // color: #fff;
   }
   &:nth-child(3n+1) {
     .list {
@@ -222,18 +225,11 @@ section.section {
         color: #3a3e4a;
       }
       .meta {
-        color: rgba(255, 255, 255, 0.8);
+        // color: rgba(255, 255, 255, 0.8);
       }
     }
     .title {
       color: #fff;
-    }
-    &#staff .website a {
-      border-color: #fff;
-      &:hover {
-        background: #fff;
-        color: #e86779;
-      }
     }
   }
   &:nth-child(3n+2) .table {
@@ -270,6 +266,25 @@ section.section {
     margin-bottom: 1em;
   }
 }
+
+
+.sec-type1 {
+  color: #000;
+  background-color: #c8cf02;
+}
+.sec-type2 {
+  color: #333;
+  background-color: #fff;
+}
+.sec-type3 {
+  color: #FFF;
+  background-color: #1693a7;
+}
+.sec-type-page {
+  color: #333;
+  background-color: #fff;
+}
+
 
 .content {
   width: 880px;
@@ -326,10 +341,12 @@ section.section {
 }
 
 .table {
+  margin: 0 auto;
   th, td {
     padding: 15px 8px;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 24px;
   }
   th {
     font-size: 80%;
