@@ -1863,7 +1863,7 @@ section.section { padding: 3em 0; }
 .section:nth-child(3n+3)#staff .website a:hover { color: #fff !important; border-color: transparent; }
 .section:nth-child(3n+3) .btn { background-color: #e86779; }
 .section:nth-child(3n+3) .btn:hover { background-color: #c85565; }
-.section h3 { margin-top: 0; text-transform: uppercase; letter-spacing: .3em; font-size: 100%; margin-bottom: 1em; }
+.section h3 { text-transform: uppercase; letter-spacing: .3em; font-size: 100%; margin-bottom: 1em; }
 
 .sec-type1 { color: #000; background-color: #c8cf02; }
 
@@ -1929,7 +1929,8 @@ section.section { padding: 3em 0; }
 .page-header h2 { font-size: 280%; margin: 0 0 .3em; }
 
 .entry-content { text-align: left; }
-.entry-content h3 { font-size: 1.17em; margin: 1em 0; letter-spacing: 0; }
+.entry-content h1, .entry-content h2 { margin-top: 2em; }
+.entry-content h3 { font-size: 1.17em; margin: 2em 0 1em 0; letter-spacing: 0; }
 
 #tumblr_controls, #tumblr_teaser_follow { display: none !important; }
 
@@ -2005,3 +2006,9 @@ section.section { padding: 3em 0; }
   #header-image .header-image-content, #header-image .header-image-mask { height: 180px; }
   .btn { width: 100%; padding: 1em .5em; }
   .alert .btn { width: auto; } }
+.large { font-size: 24px; }
+
+.table_cfm { border: 3px solid #eee; }
+.table_cfm th, .table_cfm td { padding: .8em 1em; border: 1px solid #ddd; }
+.table_cfm th { text-align: center; font-weight: bold; }
+.table_cfm td ul { margin: 0 0 0 1em; padding: 0; }

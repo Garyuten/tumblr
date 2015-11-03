@@ -259,7 +259,7 @@ section.section {
     }
   }
   h3 {
-    margin-top: 0;
+    // margin-top: 0;
     text-transform: uppercase;
     letter-spacing: .3em;
     font-size: 100%;
@@ -534,9 +534,12 @@ section.section {
 
 .entry-content {
   text-align: left;
+  h1, h2 {
+    margin-top: 2em;
+  }
   h3 {
     font-size: 1.17em;
-    margin: 1em 0;
+    margin: 2em 0 1em 0;
     letter-spacing: 0;
   }
 }
@@ -807,5 +810,28 @@ section.section {
   }
   .alert .btn {
     width: auto;
+  }
+}
+
+
+.large {
+  font-size: 24px;
+}
+
+.table_cfm {
+  border: 3px solid #eee;
+  th,td {
+    padding: .8em 1em;
+    border: 1px solid #ddd;
+  }
+  th {
+    text-align: center;
+    font-weight: bold;
+  }
+  td {
+    ul {
+      margin: 0 0 0 1em;
+      padding: 0;
+    }
   }
 }
