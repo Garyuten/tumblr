@@ -149,8 +149,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hov
   }
 }
 
-.header-nav {
+
+.header-nav{
   font-size: 120%;
+}
+
+.header-nav,
+.footer-nav{
   ul {
     margin: 10px 0 0;
     padding: 0;

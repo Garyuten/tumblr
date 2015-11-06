@@ -165,7 +165,7 @@
             <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加">
               <img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
             </a>
-            <script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            <script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async></script>
           </li>
           {/block:IfEnableBookmarkButton}
           {block:IfEnablePlus1Button}
@@ -206,6 +206,15 @@
       <h2>出展者情報</h2>
       ※出展者が決まり次第掲載します
     </section>
+
+    <section id="maker" class="section sec-type2">
+      <h2>協賛</h2>
+      <p>※協賛してくれる個人・団体様は  <a href="mailto:info@tsukuruto.net">info@tsukuruto.net</a> までご連絡ください</p>
+      <h2>主催</h2>
+      <p>つくると実行委員会 (<a href="https://www.facebook.com/groups/1696969403854686/" target="_blank">Facebookグループ</a>)</p>
+      <h3>つくると実行委員会メンバー</h3>
+      <p>（準備中）</p>
+    </section>    
     {block:IfBanner1Image}
     <section id="banner" class="section">
       <div class="content">
@@ -238,6 +247,41 @@
         <div class="entry-content">{Body}</div>
         {/block:Text}
       </div>
+      <ul class="social-buttons">
+        {block:IfEnableTweetButton}
+        <li class="social-button">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="{BlogURL}">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </li>
+        {/block:IfEnableTweetButton}
+        {block:IfEnableFacebookButton}
+        <li class="social-button">
+          <div class="fb-like" data-url="{BlogURL}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+        </li>
+        {/block:IfEnableFacebookButton}
+        {block:IfEnableBookmarkButton}
+        <li class="social-button">
+          <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加">
+            <img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
+          </a>
+          <script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async></script>
+        </li>
+        {/block:IfEnableBookmarkButton}
+        {block:IfEnablePlus1Button}
+        <li class="social-button">
+          <div class="g-plusone" data-size="medium"></div>
+          <script type="text/javascript">
+            window.___gcfg = {lang: 'ja'};
+
+            (function() {
+              var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+              po.src = 'https://apis.google.com/js/plusone.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+          </script>
+        </li>
+        {/block:IfEnablePlus1Button}
+      </ul>
     </section>
   </div>
   {/block:Posts}
@@ -246,8 +290,23 @@
 
   <footer id="footer">
     <div class="content">
+      <nav class="footer-nav">
+        <ul>
+          <li>
+            <a href="/">HOME</a>
+          </li>
+          {block:HasPages}
+              {block:Pages}
+          <li>
+            <a href="{URL}">{Label}</a>
+          </li>
+          {/block:Pages}
+            {/block:HasPages}
+        </ul>
+      </nav>
+      <p><a href="https://www.facebook.com/groups/1696969403854686/" target="_new">つくるとFacebookページ</a></p>
       <p>
-        ©{CopyrightYears} {Title}
+        ©{CopyrightYears} {Title} by つくると実行委員会
         <br/>
         {text:Footer Text}
       </p>
